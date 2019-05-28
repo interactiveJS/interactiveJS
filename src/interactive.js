@@ -1,12 +1,12 @@
 /*
 let config = {
-    drag: true, // Default true
-    resize: true, // Default true
-    close: true, // Default true
-    closeIcon: true, // Default true
-    minMax: true, // Default true
-    minMaxIcons: true, // Default true
-    minDobleClick: true, // Default true
+    drag: Boolean, // Default true
+    resize: Boolean, // Default true
+    close: Boolean, // Default true
+    closeIcon: Boolean, // Default true
+    minMax: Boolean, // Default true
+    minMaxIcons: Boolean, // Default true
+    minDobleClick: Boolean, // Default true
     minZone: HTMLelement // Default document.body
 }
 */
