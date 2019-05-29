@@ -1,3 +1,19 @@
+/* GENERAL */
+html, body {
+    overflow: hidden;
+}
+
+.interactive {
+    width: 200px;
+    height: 150px;
+    background-color: antiquewhite;
+}
+
+/* DRAGGABLE */
+.draggable {
+    position: absolute;
+}
+
 /* RESIZABLE */
 .parentResize  {
     overflow: hidden;
