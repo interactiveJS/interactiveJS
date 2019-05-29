@@ -1,23 +1,9 @@
-/*
-let config = {
-    drag: Boolean, // Default true
-    resize: Boolean, // Default true
-    close: Boolean, // Default true
-    closeIcon: Boolean, // Default true
-    minMax: Boolean, // Default true
-    minMaxIcons: Boolean, // Default true
-    minDobleClick: Boolean, // Default true
-    minZone: HTMLelement // Default document.body
-}
-*/
-
 /**
  * Make an element interactive.
  * Drag, resize, minimize, maximize, close interactions.
  * 
  * @param {String}  id - Id of the element we're making interactive
  * @param {Object}  config
- * @param {Boolean} config.resize
  */
 function interactive(id, config) {
 
@@ -27,6 +13,9 @@ function interactive(id, config) {
 
     if (config === undefined) { // Default config
         resizable(element);
+        draggable(element);
+        close(element);
+        minMax(element);
     }
     else { // Custom config
         
@@ -37,10 +26,10 @@ function interactive(id, config) {
             draggable(element);
         }
         if (config.close !== false) {
-            close(element, config.closeIcon);
+            close(element);
         }
         if (config.minMax !== false) {
-            minMax(element, config.minZone, config.minMaxIcons, config.minDobleClick);
+            minMax(element, config.minZone, config.minMaxIcons, config.minDoubleClick);
         }
     }
 
@@ -301,7 +290,14 @@ function draggable(element) {
     // Add header. Will be used as the drag point.
     let dragPoint = createElementWithIdAndClassName('div', element.id + 'Header', 'dragPoint');
     initialDragPointStyling(dragPoint);
-    element.appendChild(dragPoint);
+    // Ensure the drag point is the first element child
+    let firstChild = element.firstChild;
+    if (firstChild !== null) {
+        element.insertBefore(dragPoint, firstChild);
+    }
+    else {
+        element.appendChild(dragPoint);
+    }
 
     // Drag config for resizable elements
     if (element.classList.contains('resizable')) {
@@ -455,12 +451,10 @@ function dragAction(action, mouseDrag) {
  * @param {HTMLelement} element 
  * @param {Boolean} icon 
  */
-function close(element, icon) {
+function close(element) {
     // Add close button
-    if (icon !== false) {
-        let svgPath = [ { name: 'close', path: 'M45.1,41.6l-3.3,3.3L5.1,8.2l3.3-3.3L45.1,41.6z M8.4,45.1l-3.3-3.3L41.8,5.1l3.3,3.3L8.4,45.1z'} ];
-        addFunctionButton(element, svgPath);
-    }
+    let svgPath = [ { name: 'close', path: 'M45.1,41.6l-3.3,3.3L5.1,8.2l3.3-3.3L45.1,41.6z M8.4,45.1l-3.3-3.3L41.8,5.1l3.3,3.3L8.4,45.1z'} ];
+    addFunctionButton(element, svgPath);
 
     // Add close functionality
     addCloseFunctionality(element);
@@ -542,7 +536,14 @@ function addFunctionButton(element, svgPath) {
         container.appendChild(div);
     }
 
-    element.appendChild(container);
+    // Ensure buttons are the first element child
+    let firstElement = element.firstChild;
+    if (firstElement != null) {
+        element.insertBefore(container, firstElement);
+    }
+    else {
+        element.appendChild(container);
+    }
 }
 
 /**
@@ -1089,13 +1090,18 @@ function changeStackOrder() {
 /**
  * Ensure window resize and window load without errors.
  */
-window.onresize = onWindowChange;
-window.onload = onWindowChange;
+window.onresize = onWindowResize;
+window.onload = onWindowLoad;
 
-function onWindowChange () {
+function onWindowResize() {
     resizeOnWindowChange(); // Avoid resizable elements errors
     updateMinimizedItemsOnWindowChange(); // Avoid minimized elements display errors
 }
+
+function onWindowLoad() {
+    resizeOnWindowChange(); // Avoid resizable elements errors
+}
+
 
 /**
  * Avoid losing resizable elements outside the window when the window is resized
