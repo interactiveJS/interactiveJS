@@ -1,0 +1,28 @@
+html, body {
+    overflow: hidden;
+}
+
+.parentResize  {
+    overflow: hidden;
+    position: absolute;
+    display: grid;
+    grid-template-areas:
+        "d c b"
+        "a i e"
+        "f g h";
+}
+
+.resizable { grid-area: i; }
+.left { grid-area: a; }
+.right { grid-area: e; }
+.top { grid-area: c; }
+.bottom { grid-area: g; }
+.upperLeft { grid-area: d; }
+.upperRight { grid-area: b; }
+.lowerLeft { grid-area: f; }
+.lowerRight { grid-area: h; }
+
+.left:hover, .right:hover { cursor: ew-resize; }
+.top:hover, .bottom:hover { cursor: ns-resize; }
+.upperLeft:hover, .lowerRight:hover, .lowerRight:active { cursor: nwse-resize; }
+.upperRight:hover, .lowerLeft:hover, .lowerLeft:active { cursor: nesw-resize; }
