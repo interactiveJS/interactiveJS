@@ -20,7 +20,6 @@
 
   <!-- Styles -->
   <link href="css/resume.css" rel="stylesheet">
-  <link href="https://raw.githubusercontent.com/interactiveJS/interactiveJS/master/src/css/interactive.css" rel="stylesheet">
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -34,9 +33,8 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">EDIT</span> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt=""> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,186 +60,268 @@
       </ul>
     </div>
   </nav>
-
+  
   <div class="container-fluid p-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
-      <div class="w-100">
-        <h1 class="mb-0">INTERACTIVE <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-          <span class="text-primary">JS</span> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-        </h1>
-        <div class="subheading mb-5">
-          <a href="mailto:interactiveJS@hotmail.com">interactiveJS@hotmail.com</a>
-        </div>
-        <p class="lead mb-5">This JavaScript library allows you to convert HTML elements into interactive elements. Giving your users the freedom to drag, resize, minimize, maximize and close elements.</p>
-        <div class="social-icons">
-          <a href="https://github.com/interactiveJS/interactiveJS">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interactive">
-      <div class="w-100">
-        <h2>Interactive</h2>
-        <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
-          <div class="resume-content">
-            <p>Allows you user to drag, resize, minimize, maximize and close your html elements. You can choose which of the previous interactions are allowed.</p>
-            <div class="code">
-              <div class="subheading">interactive({String} Element Id, {Object} options);</div>
-              </br><p>Element id: The id of the element we want to make interactive.</p>
-              <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
-              <table>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>drag</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the element won't be a draggable element, meaning the user won't be able to drag the element.</td>
-                </tr>
-                <tr>
-                  <td>resize</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the element won't be a resizable element, meaning the user won't be able to resize the element.</td>
-                </tr>
-                <tr>
-                  <td>close</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
-                </tr>
-                <tr>
-                  <td>minMax</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
-                </tr>
-                <tr>
-                  <td>minMaxIcons</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
-                </tr>
-                <tr>
-                  <td>minDoubleClick</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
-                </tr>
-                <tr>
-                  <td>minZone</td>
-                  <td>HTML Element</td>
-                  <td>document.body</td>
-                  <td class="small">This is the place where the minimized elements will live.</td>
-                </tr>
-              </table>
-            </div>
-          </br><p>If you don't need the full functionality of the library, you can load just the function you need by using the individuals, check the sections: resizable, draggable and min - max -close for more details on each functionality.</p>
+
+      <!-- HOME -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+          <div class="w-100">
+              <h1 class="mb-0">INTERACTIVE 
+              <span class="text-primary">JS</span>
+              </h1>
+              <div class="subheading mb-5">
+              <a href="mailto:interactiveJS@hotmail.com">interactiveJS@hotmail.com</a>
+              </div>
+              <p class="lead mb-5">This JavaScript library allows you to convert HTML elements into interactive elements. Giving your users the freedom to drag, resize, minimize, maximize and close elements.</p>
+              <div class="social-icons">
+              <a href="https://github.com/interactiveJS/interactiveJS">
+                  <i class="fa fa-github"></i>
+              </a>
+              </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex" id="minMax">
-      <div class="w-100">
-        <h2>Minimize - Maximize - Close</h2>
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content">
-            <p>Allows you user to minimize, maximize and close your html elements.</p>
-            <div class="code">
-              <div class="subheading">minMaxClose({String} Element Id, {Object} options);</div>
-              </br><p>Element id: The id of the element we want to make interactive.</p>
-              <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
-              <table>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>close</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
-                </tr>
-                <tr>
-                  <td>minMax</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
-                </tr>
-                <tr>
-                  <td>minMaxIcons</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
-                </tr>
-                <tr>
-                  <td>minDoubleClick</td>
-                  <td>Boolean</td>
-                  <td>True</td>
-                  <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
-                </tr>
-                <tr>
-                  <td>minZone</td>
-                  <td>HTML Element</td>
-                  <td>document.body</td>
-                  <td class="small">This is the place where the minimized elements will live.</td>
-                </tr>
-              </table>
-            </div>
+      </section>
+      <hr class="m-0">
+
+      <!-- INTERACTIVE -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interactive">
+              <div class="w-100">
+                  <h2>Interactive</h2>
+                  <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
+                      <div class="resume-content">
+                          <p>Allows your user to drag, resize, minimize, maximize and close your html elements. You can choose which of the previous interactions are allowed.</p>
+                          <h3>ADD INTERACTIVE.JS TO YOUR PROJECT:</h3>
+                          <div class="code">
+                              <h6>CSS</h6>
+                              <p class="small_light">&lt; link href="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/css/interactive.min.css" rel="stylesheet"/></p>
+                              <h6>JS</h6>
+                              <p class="small_light">&lt; script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/interactive.min.js">&lt; /script> </p>
+                          </div> 
+                          </br>
+                          <h3>USAGE:</h3>
+                          <div class="code">
+                          <div class="subheading">interactive({String} Element Id, {Object} options);</div>
+                          </br><p>Element id: The id of the element we want to make interactive.</p>
+                          <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
+                          <table>
+                          <tr>
+                              <th>Name</th><th>Type</th><th>Default</th><th>Description</th>
+                          </tr>
+                          <tr>
+                              <td>drag</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the element won't be a draggable element, meaning the user won't be able to drag the element.</td>
+                          </tr>
+                          <tr>
+                              <td>resize</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the element won't be a resizable element, meaning the user won't be able to resize the element.</td>
+                          </tr>
+                          <tr>
+                              <td>close</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
+                          </tr>
+                          <tr>
+                              <td>minMax</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
+                          </tr>
+                          <tr>
+                              <td>minMaxIcons</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
+                          </tr>
+                          <tr>
+                              <td>minDoubleClick</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
+                          </tr>
+                          <tr>
+                              <td>minZone</td>
+                              <td>HTML Element</td>
+                              <td>document.body</td>
+                              <td class="small">This is the place where the minimized elements will live.</td>
+                          </tr>
+                          </table>
+                          </div>
+                      </br>
+                      <h3>DEMO:</h3>
+                      <div class="code">
+                          <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="interactiveJS" data-slug-hash="qGJqJe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Interactive Demo">
+                              <span>See the Pen <a href="https://codepen.io/interactiveJS/pen/qGJqJe/">
+                              Interactive Demo</a> by interactiveJS (<a href="https://codepen.io/interactiveJS">@interactiveJS</a>)
+                              on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                      </div>
+                      </br><p>If you don't need the full functionality of the library, you can load just the function you need by using the individuals, check the sections: resizable, draggable and min - max -close for more details.</p>
+                      </div>
+                  </div>
+              </div>
+      </section>
+      <hr class="m-0">
+
+      <!-- MIN MAX CLOSE -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="minMax">
+          <div class="w-100">
+              <h2>Minimize - Maximize - Close</h2>
+              <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
+                  <div class="resume-content">
+                      <p>Allows you user to minimize, maximize and close your html elements.</p>
+                      <h3>ADD MINIMIZE - MAXIMIZE - CLOSE TO YOUR PROJECT:</h3>
+                      <div class="code">
+                          <h6>CSS</h6>
+                          <p class="small_light">&lt; link href="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/css/minMaxClose.min.css" rel="stylesheet"/></p>
+                          <h6>JS</h6>
+                          <p class="small_light">&lt; script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/individuals/minMaxClose.min.js">&lt; /script> </p>
+                      </div> 
+                      </br>
+                      <h3>USAGE:</h3>
+                      <div class="code">
+                      <div class="subheading">minMaxClose({String} Element Id, {Object} options);</div>
+                      </br><p>Element id: The id of the element we want to minimize, maximize and/or close.</p>
+                      <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
+                      <table>
+                          <tr>
+                              <th>Name</th><th>Type</th><th>Default</th><th>Description</th>
+                          </tr>
+                          <tr>
+                              <td>close</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
+                          </tr>
+                          <tr>
+                              <td>minMax</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
+                          </tr>
+                          <tr>
+                              <td>minMaxIcons</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
+                          </tr>
+                          <tr>
+                              <td>minDoubleClick</td>
+                              <td>Boolean</td>
+                              <td>True</td>
+                              <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
+                          </tr>
+                          <tr>
+                              <td>minZone</td>
+                              <td>HTML Element</td>
+                              <td>document.body</td>
+                              <td class="small">This is the place where the minimized elements will live.</td>
+                          </tr>
+                      </table>
+                      </div>
+                      </br>
+                      <h3>DEMO:</h3>
+                      <div class="code">
+                          <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="interactiveJS" data-slug-hash="joQqLB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Minimize - Maximize - Close">
+                          <span>See the Pen <a href="https://codepen.io/interactiveJS/pen/joQqLB/">
+                          Minimize - Maximize - Close</a> by interactiveJS (<a href="https://codepen.io/interactiveJS">@interactiveJS</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                          </p>
+                          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="resume-section p-3 p-lg-5 d-flex" id="drag">
-      <div class="w-100">
-        <h2>Draggable</h2>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <p>Allows you user to drag your html elements.</p>
-            <div class="code">
-              <div class="subheading">draggable({String} Element Id);</div>
-              </br><p>Element id: The id of the element we want to make draggable.</p>
-            </div>
+      </section>
+      <hr class="m-0">
+
+      <!-- DRAGGABLE -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="drag">
+              <div class="w-100">
+                  <h2>Draggable</h2>
+                  <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
+                      <div class="resume-content">
+                          <p>Allows you user to drag your html elements.</p>
+                          <h3>ADD DRAGGABLE TO YOUR PROJECT:</h3>
+                          <div class="code">
+                              <h6>JS</h6>
+                              <p class="small_light">&lt; script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/individuals/draggable.min.js">&lt; /script> </p>
+                          </div> 
+                          </br>
+                          <h3>USAGE:</h3>
+                          <div class="code">
+                          <div class="subheading">draggable({String} Element Id);</div>
+                          </br><p>Element id: The id of the element we want to make draggable.</p>
+                          </div>
+                          </br>
+                          <h3>DEMO:</h3>
+                          <div class="code">
+                              <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="interactiveJS" data-slug-hash="NVEPdm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Draggable">
+                                  <span>See the Pen <a href="https://codepen.io/interactiveJS/pen/NVEPdm/">
+                                  Draggable</a> by interactiveJS (<a href="https://codepen.io/interactiveJS">@interactiveJS</a>)
+                                  on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </section>
+      <hr class="m-0">
+
+      <!-- RESIZABLE -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="resize">
+              <div class="w-100">
+                  <h2>Resizable</h2>
+                  <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
+                      <div class="resume-content">
+                          <p>Allows you user to resize your html elements.</p>
+                          <h3>ADD RESIZABLE TO YOUR PROJECT:</h3>
+                          <div class="code">
+                              <h6>CSS</h6>
+                              <p class="small_light">&lt; script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/css/resizable.min.css">&lt; /script> </p>
+                              <h6>JS</h6>
+                              <p class="small_light">&lt; script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/individuals/resizable.min.js">&lt; /script> </p>
+                          </div> 
+                          </br>
+                          <h3>USAGE:</h3>
+                          <div class="code">
+                          <div class="subheading">resizable({String} Element Id);</div>
+                          </br><p>Element id: The id of the element we want to make resizable.</p>
+                          </div>
+                          </br>
+                          <h3>DEMO:</h3>
+                          <div class="code">
+                              <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="interactiveJS" data-slug-hash="GawZGJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Resizable">
+                                  <span>See the Pen <a href="https://codepen.io/interactiveJS/pen/GawZGJ/">
+                                  Resizable</a> by interactiveJS (<a href="https://codepen.io/interactiveJS">@interactiveJS</a>)
+                                  on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </section>
+      <hr class="m-0">
+
+      <!-- FOOTER -->
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+          <div class="w-100"></div>
+              <div class="social-icons" style="float: right">
+                  <a href="https://github.com/interactiveJS/interactiveJS">
+                  <i class="fa fa-github"></i>
+                  </a>
+              </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex" id="resize">
-      <div class="w-100">
-        <h2>Resizable</h2>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <p>Allows you user to resize your html elements.</p>
-            <div class="code">
-              <div class="subheading">resizable({String} Element Id);</div>
-              </br><p>Element id: The id of the element we want to make resizable.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
-        <div class="w-100">
-          <div class="social-icons" style="float: right">
-            <a href="https://github.com/interactiveJS/interactiveJS">
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-        </div>
-    </section>
-      
+      </section>
+
   </div>
+
 </body>
 
 </html>
