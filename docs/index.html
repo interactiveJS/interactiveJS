@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>interactive.js - Documentation </title>
+
+  <!-- Bootstrap cCSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <link href="css/resume.css" rel="stylesheet">
+  <link href="https://raw.githubusercontent.com/interactiveJS/interactiveJS/master/src/css/interactive.css" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/resume.min.js"></script>
+
+</head>
+
+<body id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">EDIT</span> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt=""> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interactive">Full Interactive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#minMax">Min-Max-Close</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#drag">Draggable</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#resize">Resizable</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+      <div class="w-100">
+        <h1 class="mb-0">INTERACTIVE <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+          <span class="text-primary">JS</span> <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </h1>
+        <div class="subheading mb-5">
+          <a href="mailto:interactiveJS@hotmail.com">interactiveJS@hotmail.com</a>
+        </div>
+        <p class="lead mb-5">This JavaScript library allows you to convert HTML elements into interactive elements. Giving your users the freedom to drag, resize, minimize, maximize and close elements.</p>
+        <div class="social-icons">
+          <a href="https://github.com/interactiveJS/interactiveJS">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <hr class="m-0">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interactive">
+      <div class="w-100">
+        <h2>Interactive</h2>
+        <div class="resume-item d-flex flex-column flex-md-row mb-5 justify-content-center">
+          <div class="resume-content">
+            <p>Allows you user to drag, resize, minimize, maximize and close your html elements. You can choose which of the previous interactions are allowed.</p>
+            <div class="code">
+              <div class="subheading">interactive({String} Element Id, {Object} options);</div>
+              </br><p>Element id: The id of the element we want to make interactive.</p>
+              <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>drag</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the element won't be a draggable element, meaning the user won't be able to drag the element.</td>
+                </tr>
+                <tr>
+                  <td>resize</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the element won't be a resizable element, meaning the user won't be able to resize the element.</td>
+                </tr>
+                <tr>
+                  <td>close</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
+                </tr>
+                <tr>
+                  <td>minMax</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
+                </tr>
+                <tr>
+                  <td>minMaxIcons</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
+                </tr>
+                <tr>
+                  <td>minDoubleClick</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
+                </tr>
+                <tr>
+                  <td>minZone</td>
+                  <td>HTML Element</td>
+                  <td>document.body</td>
+                  <td class="small">This is the place where the minimized elements will live.</td>
+                </tr>
+              </table>
+            </div>
+          </br><p>If you don't need the full functionality of the library, you can load just the function you need by using the individuals, check the sections: resizable, draggable and min - max -close for more details on each functionality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="m-0">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="minMax">
+      <div class="w-100">
+        <h2>Minimize - Maximize - Close</h2>
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content">
+            <p>Allows you user to minimize, maximize and close your html elements.</p>
+            <div class="code">
+              <div class="subheading">minMaxClose({String} Element Id, {Object} options);</div>
+              </br><p>Element id: The id of the element we want to make interactive.</p>
+              <p>Options: Object containing properties that allow you to customize your interactive elements.</p>
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>close</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the won't be able to close the element.</td>
+                </tr>
+                <tr>
+                  <td>minMax</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the won't be able to minimize and maximize the element.</td>
+                </tr>
+                <tr>
+                  <td>minMaxIcons</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the element won't have minimize and maximize buttons.</td>
+                </tr>
+                <tr>
+                  <td>minDoubleClick</td>
+                  <td>Boolean</td>
+                  <td>True</td>
+                  <td class="small">If set to <b>False</b> the user won't be able to minimize an element by double clicking the element or the drag point for draggable elements.</td>
+                </tr>
+                <tr>
+                  <td>minZone</td>
+                  <td>HTML Element</td>
+                  <td>document.body</td>
+                  <td class="small">This is the place where the minimized elements will live.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="resume-section p-3 p-lg-5 d-flex" id="drag">
+      <div class="w-100">
+        <h2>Draggable</h2>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <p>Allows you user to drag your html elements.</p>
+            <div class="code">
+              <div class="subheading">draggable({String} Element Id);</div>
+              </br><p>Element id: The id of the element we want to make draggable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="m-0">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="resize">
+      <div class="w-100">
+        <h2>Resizable</h2>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <p>Allows you user to resize your html elements.</p>
+            <div class="code">
+              <div class="subheading">resizable({String} Element Id);</div>
+              </br><p>Element id: The id of the element we want to make resizable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="m-0">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+        <div class="w-100">
+          <div class="social-icons" style="float: right">
+            <a href="https://github.com/interactiveJS/interactiveJS">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+    </section>
+      
+  </div>
+</body>
+
+</html>
+
+<!--
+  Template: 
+  https://startbootstrap.com/previews/resume/
+-->
