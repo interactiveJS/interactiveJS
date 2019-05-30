@@ -18,7 +18,7 @@ function minMaxClose(id, config) {
             close(element, config.closeIcon);
         }
         if (config.minMax !== false) {
-            minMax(element, config.minZone, config.minMaxIcons, config.minDobleClick);
+            minMax(element, config.minZone, config.minMaxIcons, config.minDoubleClick);
         }
     }
 }
