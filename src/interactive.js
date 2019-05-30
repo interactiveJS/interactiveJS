@@ -953,6 +953,10 @@ function addFullScreenMaximizeFunction(element) {
     
     let maxBtn =  getButton(element, 'maxBtn');
     
+    if (maxBtn == undefined || maxBtn == null) {
+        return;
+    }
+    
     maxBtn.onclick = function() {
 
         let index = '' + element.id;
