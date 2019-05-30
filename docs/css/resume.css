@@ -30,6 +30,11 @@ h6 {
   color: #343a40;
 }
 
+h6 {
+  letter-spacing: 2px;
+  color:antiquewhite;
+}
+
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
@@ -40,7 +45,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p.lead {
@@ -81,7 +86,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: rgb(202, 171, 130);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -91,7 +96,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: antiquewhite;
 }
 
 @media (min-width: 992px) {
@@ -152,7 +157,6 @@ p.lead {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 75rem;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -191,7 +195,7 @@ a:hover, a:focus, a:active {
 .code {
   margin: auto;
   padding: 10px 10px 10px 10px;
-  width: 80%;
+  width: 100%;
   background-color: rgb(48, 55, 97);
 }
 
@@ -212,4 +216,9 @@ th {
   text-transform: uppercase;
   background-color: #868e96;
   color:  rgb(48, 55, 97);
+}
+
+.small_light {
+  color: antiquewhite;
+  font-size: 0.8rem;
 }
